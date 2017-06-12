@@ -28,3 +28,43 @@ footer{
     background-color: blue;
     text-align: center;/* 中央揃え */
 }
+
+/* 641px以上 */
+@media screen and (min-width:641px){
+   asde{
+      width: calc(50% - 20px);
+      float:left
+   }
+   #side:after{
+      /* clearfix */
+      content:"";
+      display:block;
+      clear:both;
+   }
+}
+
+/* 1025px以上 */
+@media screen and (min-width:1025px){
+   #main{
+      max-width: 1024px;/* 最長の幅を設定 */
+      margin: auto;/* 中央揃え */
+   }
+   section{
+      width: calc(70% - 20px);/* paddingを抜いて70%の幅とする */
+      float:left;/* 左側に置く */
+   }
+   #side{
+      width: calc(1024% - 718px);/* #mainの幅を引いて幅を決定 */
+      float:left;/* #mainの右に回り込む */
+   }
+   aside{
+      width: calc(100% - 20px);/* paddingを考慮して幅を決める */
+   }
+   #main:after{
+      /* footerを下に回り込ませる */
+      /* cleafix */
+      content:"";
+      display:block;
+      clear:both;
+   }
+}
